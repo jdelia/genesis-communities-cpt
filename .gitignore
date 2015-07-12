@@ -3,7 +3,7 @@
 *.zip
 *.gz
 sublime/*.sublime-workspace
-# sublime/*.sublime-project
+sublime/*.sublime-project
 # sftp configuration file
 sftp-config.json
 
