@@ -1,0 +1,12 @@
+# files to ignore
+.DS_Store
+*.zip
+*.gz
+sublime/*.sublime-workspace
+# sublime/*.sublime-project
+# sftp configuration file
+sftp-config.json
+
+# Thumbnails
+._*
+

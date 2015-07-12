@@ -1,0 +1,177 @@
+/* Styles for Genesis AWP Community Plugin */
+
+
+.featured-community {
+	text-align: center;
+	overflow: hidden;
+}
+
+.awp-community-archive .archive-title,
+.featured-community .widget-title {
+	text-align: center;
+	font-size: 24px;
+	margin-bottom: 40px;
+	
+}
+
+.featured-community .awp-community {
+	display: inline-block;
+	float: none;
+	margin: 0 15px 30px;
+	padding: 0;
+	vertical-align: top;
+	width: 250px;
+	border: 1px solid #e5e5e5;
+	overflow: hidden;
+}
+
+.awp-community.entry {
+	border: 1px solid #e5e5e5;
+	margin: 0 15px 30px;
+}
+
+.featured-community .awp-community.entry img,
+.archive .awp-community.entry img {
+
+	width:250px;
+
+	-webkit-transition: all 0.1s ease-in-out;
+	-moz-transition:    all 0.1s ease-in-out;
+	-ms-transition:     all 0.1s ease-in-out;
+	-o-transition:      all 0.1s ease-in-out;
+	transition:         all 0.1s ease-in-out;
+}
+
+.awp-community-image {
+	width: 250px;
+	height: auto;
+}
+
+.featured-community .awp-community.entry img:hover,
+.archive .awp-community.entry img:hover {
+
+	opacity: .7;
+}
+
+
+.featured-community h2.entry-title {
+	margin-bottom: 0; 
+}
+
+.featured-community .entry-title {
+	padding: 20px 20px 0 20px;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 18px;
+}
+.archive .awp-community-image .entry-title,
+.sidebar .featured-community .entry-title {
+	padding: 20px;
+}
+
+.featured-community .entry-title a {
+	text-decoration: none;
+}
+
+
+@media only screen and (max-width: 1200px) {
+
+	.featured-community .awp-community {
+
+		width: 440px;
+
+	}
+	.featured-community .awp-community.entry img,
+	.archive .awp-community.entry img {
+	
+		width:440px;
+	
+	}
+
+	.awp-community-image {
+		width: 440px;
+	}
+
+	.sidebar .featured-community {
+		width: 100%;
+	}
+
+	.sidebar .featured-community .awp-community {
+		width: 80%;
+
+	}
+	.sidebar .featured-community .awp-community.entry img {
+		width: 100%;
+	}
+
+	.sidebar .awp-community-image {
+		width: 100%;
+	}
+	.sidebar .awp-community .entry-header {
+		width: 100%;
+	}
+
+	.sidebar .featured-community .entry-title {
+		padding: 10px;
+		text-transform: uppercase;
+		text-align: center;
+		font-size: 12px;
+		
+	}
+
+}
+
+@media only screen and (max-width: 800px) {
+	.featured-community .awp-community {
+
+		width: 300px;
+
+	}
+	.featured-community .awp-community.entry img,
+	.archive .awp-community.entry img {
+
+		width: 300px;
+
+
+	}
+
+	.awp-community-image {
+		width: 300px;
+	}
+
+	.sidebar .featured-community .entry-title {
+		font-size: 20px;
+		
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.sidebar .featured-community .awp-community,
+	.featured-community .awp-community {
+
+		width: 100%;
+		display:block;
+		margin: 0;
+		padding: 0;
+
+	}
+	.featured-community .awp-community.entry img,
+	.archive .awp-community.entry img {
+
+		width: 100%;
+
+
+	}
+
+	.awp-community-image {
+		width: 100%;
+
+
+	}
+
+	.sidebar .featured-community .entry-title,
+	.featured-community .entry-title {
+		font-size: 18px;
+		
+	}
+}
