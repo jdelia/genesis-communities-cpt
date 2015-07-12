@@ -1,0 +1,191 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Genesis Communities CPT\n"
+"POT-Creation-Date: 2015-07-12 15:18-0400\n"
+"PO-Revision-Date: 2015-07-12 15:18-0400\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.2\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e;esc_attr_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: admin/class-awp-communities.php:94
+msgid "Settings"
+msgstr ""
+
+#: admin/views/awp-settings.php:51
+msgid "Save Settings"
+msgstr ""
+
+#: genesis-awp-communities.php:106
+#, php-format
+msgid ""
+"Whoa.. this plugin requires that you have installed the %1$sGenesis "
+"Framework version %2$s%3$s or greater."
+msgstr ""
+
+#: genesis-awp-communities.php:114
+#, php-format
+msgid ""
+"Oops.. you need to update to the latest version of the %1$sGenesis Framework "
+"version %2$s%3$s or greater to install this plugin."
+msgstr ""
+
+#: genesis-awp-communities.php:168
+msgid "Add New"
+msgstr ""
+
+#: genesis-awp-communities.php:169
+msgid "Add New "
+msgstr ""
+
+#: genesis-awp-communities.php:170
+msgid "New "
+msgstr ""
+
+#: genesis-awp-communities.php:171
+msgid "Edit "
+msgstr ""
+
+#: genesis-awp-communities.php:172
+msgid "View "
+msgstr ""
+
+#: genesis-awp-communities.php:173
+msgid "All "
+msgstr ""
+
+#: genesis-awp-communities.php:174
+msgid "Search "
+msgstr ""
+
+#: genesis-awp-communities.php:175
+msgid "Parent "
+msgstr ""
+
+#: genesis-awp-communities.php:176 genesis-awp-communities.php:177
+msgid "No "
+msgstr ""
+
+#: genesis-awp-communities.php:176
+msgid " found."
+msgstr ""
+
+#: genesis-awp-communities.php:177
+msgid " found in Trash."
+msgstr ""
+
+#: genesis-awp-communities.php:222
+msgid "awp-feature-community"
+msgstr ""
+
+#: genesis-awp-communities.php:223
+msgid "awp-feature-small"
+msgstr ""
+
+#: genesis-awp-communities.php:224
+msgid "awp-feature-wide"
+msgstr ""
+
+#: widgets/featured-awp-communities-widget.php:43
+msgid "Displays featured communities with thumbnails"
+msgstr ""
+
+#: widgets/featured-awp-communities-widget.php:52
+msgid "AWP Featured Communities"
+msgstr ""
+
+#: widgets/featured-awp-communities-widget.php:195
+#: widgets/featured-awp-communities-widget.php:213
+msgid "Title"
+msgstr ""
+
+#: widgets/featured-awp-communities-widget.php:200
+msgid "Number of Posts to Show"
+msgstr ""
+
+#: widgets/featured-awp-communities-widget.php:205
+msgid "Number of Posts to Offset"
+msgstr ""
+
+#: widgets/featured-awp-communities-widget.php:210
+msgid "Order By"
+msgstr ""
+
+#: widgets/featured-awp-communities-widget.php:212
+msgid "Date"
+msgstr ""
+
+#: widgets/featured-awp-communities-widget.php:214
+msgid "Parent"
+msgstr ""
+
+#: widgets/featured-awp-communities-widget.php:215
+msgid "Menu Order"
+msgstr ""
+
+#: widgets/featured-awp-communities-widget.php:216
+msgid "ID"
+msgstr ""
+
+#: widgets/featured-awp-communities-widget.php:217
+msgid "Comment Count"
+msgstr ""
+
+#: widgets/featured-awp-communities-widget.php:218
+msgid "Random"
+msgstr ""
+
+#: widgets/featured-awp-communities-widget.php:223
+msgid "Sort Order"
+msgstr ""
+
+#: widgets/featured-awp-communities-widget.php:225
+msgid "Descending (3, 2, 1)"
+msgstr ""
+
+#: widgets/featured-awp-communities-widget.php:226
+msgid "Ascending (1, 2, 3)"
+msgstr ""
+
+#: widgets/featured-awp-communities-widget.php:234
+msgid "Show Featured Image"
+msgstr ""
+
+#: widgets/featured-awp-communities-widget.php:238
+msgid "Image Size"
+msgstr ""
+
+#: widgets/featured-awp-communities-widget.php:253
+msgid "Show Post Title"
+msgstr ""
+
+#: widgets/featured-awp-communities-widget.php:257
+msgid "Content Type"
+msgstr ""
+
+#: widgets/featured-awp-communities-widget.php:259
+msgid "Show Content"
+msgstr ""
+
+#: widgets/featured-awp-communities-widget.php:260
+msgid "Show Excerpt"
+msgstr ""
+
+#: widgets/featured-awp-communities-widget.php:261
+msgid "Show Content Limit"
+msgstr ""
+
+#: widgets/featured-awp-communities-widget.php:262
+msgid "No Content"
+msgstr ""
+
+#: widgets/featured-awp-communities-widget.php:265
+msgid "Limit content to"
+msgstr ""

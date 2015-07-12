@@ -55,6 +55,9 @@ Yes. Install the plugin into your active Genesis Child theme.
 
 Look in your Dashboard under Comments for a house icon with the name of your custom post type (Defaults to Communities).
 
+= Is this plugin translation ready? =
+
+The code is in place, but there are still phrases in the plugin that need to be updated.
 
 ==Changelog==
 = 0.5.0 =
