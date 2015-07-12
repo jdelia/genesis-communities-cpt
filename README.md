@@ -1,4 +1,4 @@
-# Genesis AgentWorks Pro Communities
+# Genesis Communities CPT plugin
 
 This plugin adds a Community Custom Post Type to a Genesis Child theme, similar to the one in the Winning Agent Pro theme.
 
@@ -8,14 +8,14 @@ This plugin adds a Community Custom Post Type to a Genesis Child theme, similar 
 
 ## Requirements
  * WordPress 4.0
- * Genesis 2.0
+ * Genesis 2.1.2
 
 ## Installation
 
 This section describes how to install the plugin and get it working.
 
 1. Make sure you have the a Genesis Child theme installed and active.
-2. Upload the entire `genesis-awp-communities` folder to the `/wp-content/plugins/` directory
+2. Upload the entire `genesis-communities-cpt` folder to the `/wp-content/plugins/` directory
 3. Activate the plugin through the 'Plugins' menu in WordPress
 4. That's it!
 5. You can change the name of the slug and custom post type name in Settings under the Communities Menu in the Dashboard. See readme.txt for instructions. You can also deregister the plugin stylesheet if you wish to include the styles in your theme's stylesheet to minimize HTTP requests.
@@ -40,7 +40,7 @@ Check out the Codex for more information about [installing plugins manually](htt
 
 Using git, browse to your `/wp-content/plugins/` directory and clone this repository:
 
-`git clone git@github.com:savvyjackie/genesis-awp-communities.git`
+`git clone git@github.com:savvyjackie/genesis-communities-cpt.git`
 
 Then go to your Plugins screen and click __Activate__.
 

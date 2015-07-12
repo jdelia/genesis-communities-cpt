@@ -13,7 +13,7 @@
  * @copyright         2015 Jackie D'Elia
  *
  * Plugin Name:       Genesis AWP Communities
- * Plugin URI:        https://github.com/savvyjackie/genesis-awp-communities
+ * Plugin URI:        https://github.com/savvyjackie/genesis-communities-cpt
  * Description:       Adds a custom post type for Communities to any Genesis Child Theme. Includes Featured Communities Widget, Custom Archive Page and ability to edit the Custom Post Type name and slug url.
  * Version:           0.5.0
  * Author:            Jackie D'Elia
@@ -24,7 +24,7 @@
  * Text Domain:       genesis-awp-communities
  * Domain Path:       /languages/
  * Function prefix:   genawpcomm_
- * GitHub Plugin URI: https://github.com/savvyjackie/genesis-awp-communities
+ * GitHub Plugin URI: https://github.com/savvyjackie/genesis-communities-cpt
  * GitHub Branch:     master
  */
 
@@ -74,7 +74,9 @@ define( 'GENAWPCOMM_DOMAIN', 'genesis-awp-communities' );
  *
  * @since 0.2.0
  */
-load_plugin_textdomain( 'genesis-awp-communities', false, 'genesis-awp-communities/languages' );
+
+
+load_plugin_textdomain( 'genesis-awp-communities', false, 'genesis-communities-cpt/languages/' );
 
 register_activation_hook( __FILE__, 'genawpcomm_activation_check' );
 

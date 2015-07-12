@@ -1,11 +1,11 @@
-===Genesis AgentWorks Pro Communities===
+===Genesis Communities CPT===
 
 Contributors: JDELIA
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=3SHMWYFBDVPYU
 Tags: genesis, real estate, communities, custom post type
 Requires at least: 4.0.0
 Tested up to: 4.2.2
-Stable tag: 0.4.3
+Stable tag: 0.5.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -40,7 +40,7 @@ Will display up to 12 communities per page (four across on desktop and responsiv
 This section describes how to install the plugin and get it working.
 
 1. Make sure you have the Genesis Framework installed and a Genesis Child theme active.
-2. Upload the entire `genesis-awp-communities` folder to the `/wp-content/plugins/` directory
+2. Upload the entire `genesis-communities-cpt` folder to the `/wp-content/plugins/` directory
 3. Activate the plugin through the 'Plugins' menu in WordPress
 4. That's it! You can enter your Archive Page settings under Communities -> Archive Settings.
 5. You can change the name of the slug in Communities -> Settings. 
@@ -57,6 +57,11 @@ Look in your Dashboard under Comments for a house icon with the name of your cus
 
 
 ==Changelog==
+= 0.5.0 =
+Plugin renamed to Genesis Communities CPT. New Github location. https://github.com/savvyjackie/genesis-communities-cpt
+
+Still need to add support for languages and test.
+
 = 0.4.3 =
 Bug fix if any of the fields are empty to reset to default on settings page. Setting pages now shows current version number.
 = 0.4.2 =
