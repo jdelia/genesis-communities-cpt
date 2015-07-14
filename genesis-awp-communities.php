@@ -94,7 +94,7 @@ function genawpcomm_activation_check() {
     
     // Get the version
     $version                 = $theme->get( 'Version' );
-    echo wp_get_theme();
+   
     // Set what we consider the minimum Genesis version
     $minimum_genesis_version = '2.1.2';
     
