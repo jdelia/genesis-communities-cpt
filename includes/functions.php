@@ -78,19 +78,19 @@ function genawpcomm_awp_cpt_posts_per_page( $query ) {
     }
 }
 
-// Add featured-wide image above single posts.
+// Add featured-wide image above single awp-community post type.
 add_action( 'genesis_before_entry_content', 'genawpcomm_awp_featured_image' );
 function genawpcomm_awp_featured_image() {
     global $post;
 
-    // Return early if not a singular or does not have thumbnail
-    if ( ! get_post_type() == 'awp-community' || ! is_singular() || ! has_post_thumbnail() || is_page() ) {
-        return;
-    }
+    // only run if on custom post type and on single post
+    if ( is_singular('awp-community') ) {
+     
+        echo '<div class="featured-image">';
+        echo get_the_post_thumbnail( $post->ID, 'awp-feature-wide' );
+        echo '</div>';
 
-    echo '<div class="featured-image">';
-    echo get_the_post_thumbnail( $post->ID, 'awp-feature-wide' );
-    echo '</div>';
+    }
 }
 
 // remove the layout settings for the archive page of awp-community since we force it to full width
@@ -105,7 +105,7 @@ function genawpcomm_awp_remove_genesis_cpt_metaboxes( $_genesis_cpt_settings_pag
 
 add_action( 'pre_get_posts', 'genawpcomm_awp_community_change_sort_order_custom', 12 );
 /**
- * Add pagination and sort by title for community archives
+ * Add pagination and sort by title for community archives page
  * show all posts on one page limit 100
  */
 function genawpcomm_awp_community_change_sort_order_custom( $query ) {

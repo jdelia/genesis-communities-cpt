@@ -74,7 +74,8 @@ class AWP_Featured_Communities extends WP_Widget {
 
 		//* Set up the widget title
 		if ( ! empty( $instance['title'] ) )
-			echo $before_title . apply_filters( 'widget_title', $instance['title'], $instance, $this->id_base ) . $after_title;
+			//echo $before_title . apply_filters( 'widget_title', $instance['title'], $instance, $this->id_base ) . $after_title;
+			echo '<h2 class="widget-title widgettitle">'  . apply_filters( 'widget_title', $instance['title'], $instance, $this->id_base ) . '</h2>';
 
 		$query_args = array(
 			'post_type' => 'awp-community',
@@ -107,7 +108,7 @@ class AWP_Featured_Communities extends WP_Widget {
 
 			if ( $instance['show_title'] ) {
 				echo '<header class="entry-header">';
-					printf( '<h2 class="entry-title"><a href="%s" title="%s">%s</a></h2>', get_permalink(), the_title_attribute( 'echo=0' ), get_the_title() );
+					printf( '<h3 class="entry-title"><a href="%s" title="%s">%s</a></h3>', get_permalink(), the_title_attribute( 'echo=0' ), get_the_title() );
 				echo '</header>';
 			}
 

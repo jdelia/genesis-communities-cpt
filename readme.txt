@@ -5,7 +5,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: genesis, real estate, communities, custom post type
 Requires at least: 4.0.0
 Tested up to: 4.2.2
-Stable tag: 0.5.0
+Stable tag: 0.5.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -60,19 +60,27 @@ Look in your Dashboard under Comments for a house icon with the name of your cus
 The code is in place, but there are still phrases in the plugin that need to be updated.
 
 ==Changelog==
+= 0.5.1 =
+Updated code in functions.php to fix bug that displayed featured image on all single posts instead of just the ‘awp-community’ custom type posts.
+
 = 0.5.0 =
+
 Plugin renamed to Genesis Communities CPT. New Github location. https://github.com/savvyjackie/genesis-communities-cpt
 
 Still need to add support for languages and test.
 
 = 0.4.3 =
 Bug fix if any of the fields are empty to reset to default on settings page. Setting pages now shows current version number.
+
 = 0.4.2 =
 Bug fix - uncommented code to update option on init. 
+
 = 0.4.1 =
 Fixed bug in awp-settings.php missing slug variable on initial load.
+
 = 0.4.0 =
 Added support to change the name of the custom post type.
+
 = 0.3.2 =
 Updated plugin with function prefix to avoid conflicts. Updated Readme.txt and instructions.
 
@@ -80,6 +88,9 @@ Updated plugin with function prefix to avoid conflicts. Updated Readme.txt and i
 Initial Release.
 
 ==Upgrade Notice==
+
+= 0.5.1 =
+Contains bug fixes and enhancements since initial release.
 
 = 0.2.2 =
 Initial Release.

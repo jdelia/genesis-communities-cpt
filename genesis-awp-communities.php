@@ -15,7 +15,7 @@
  * Plugin Name:       Genesis AWP Communities
  * Plugin URI:        https://github.com/savvyjackie/genesis-communities-cpt
  * Description:       Adds a custom post type for Communities to any Genesis Child Theme. Includes Featured Communities Widget, Custom Archive Page and ability to edit the Custom Post Type name and slug url.
- * Version:           0.5.0
+ * Version:           0.5.1
  * Author:            Jackie D'Elia
  * Author URI:        http://www.savvyjackiedesigns.com
  * Text Domain:       genesis-awp-community
@@ -94,7 +94,7 @@ function genawpcomm_activation_check() {
     
     // Get the version
     $version                 = $theme->get( 'Version' );
-    
+    echo wp_get_theme();
     // Set what we consider the minimum Genesis version
     $minimum_genesis_version = '2.1.2';
     
@@ -227,18 +227,18 @@ function genawpcomm_create_custom_post_type() {
     
    
 }
-
-add_action( 'wp_enqueue_scripts', 'genawpcomm_enqueue_main_stylesheet', 99 );
+/* load the plugin stylesheet if not deregistered in settings
+ * use a lower priority number to load earlier, so users can override styles in their stylesheet
+*/
+add_action( 'wp_enqueue_scripts', 'genawpcomm_enqueue_main_stylesheet', 5 );
 function genawpcomm_enqueue_main_stylesheet() {
   $options = get_option( 'plugin_awp_community_settings' );
     
     if( $options['stylesheet_load'] == 0 ) {
         
-        //  echo 'We are in styles';
         $awp_css_path = GENAWPCOMM_PLUGIN_URL . 'css/awp-communities.css';
         if( file_exists( GENAWPCOMM_BASE_DIR . '/css/awp-communities.css' ) ) {
-            
-            //wp_register_style( 'awp-community-style', $awp_css_path );
+
             wp_enqueue_style( 'awp-community-style', $awp_css_path, false, '1.0.0' );
         }
     }
