@@ -27,7 +27,19 @@
 
 .awp-community.entry {
 	border: 1px solid #e5e5e5;
-	margin: 0 15px 30px;
+	margin: 0 15px 20px;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.featured-community .widget-wrap .awp-community.entry {
+	border-bottom: 1px solid #e5e5e5;
+	margin-bottom: 20px;
+	padding-bottom: 12px;
+}
+
+
+.single .awp-community.entry {
+	border:none;
 }
 
 .featured-community .awp-community.entry img,
@@ -62,7 +74,7 @@
 	padding: 20px 20px 0 20px;
 	text-transform: uppercase;
 	text-align: center;
-	font-size: 18px;
+	font-size: 18px; 
 }
 .archive .awp-community-image .entry-title,
 .sidebar .featured-community .entry-title {
@@ -71,8 +83,12 @@
 
 .featured-community .entry-title a {
 	text-decoration: none;
+	font-size: 18px;
 }
 
+.sidebar .featured-community .widget-wrap .awp-community {
+	padding: 0;
+}
 
 @media only screen and (max-width: 1200px) {
 

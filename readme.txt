@@ -60,6 +60,8 @@ Look in your Dashboard under Comments for a house icon with the name of your cus
 The code is in place, but there are still phrases in the plugin that need to be updated.
 
 ==Changelog==
+= 0.5.2 =
+Stylesheet changes for font sizes and removing borders on single page post display.
 = 0.5.1 =
 Updated code in functions.php to fix bug that displayed featured image on all single posts instead of just the ‘awp-community’ custom type posts.
 
@@ -88,6 +90,9 @@ Updated plugin with function prefix to avoid conflicts. Updated Readme.txt and i
 Initial Release.
 
 ==Upgrade Notice==
+
+= 0.5.2 =
+Contains corrections and enhancements to the stylesheet.
 
 = 0.5.1 =
 Contains bug fixes and enhancements since initial release.
