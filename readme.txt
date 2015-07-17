@@ -11,9 +11,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-This plugin adds a Community Custom Post Type to a Genesis Child theme, similar to the one in the Winning Agent Pro theme. 
+This plugin adds a Community Custom Post Type to a Genesis Child theme, similar to the one in the Winning Agent Pro theme by Carrie Dils. You can change the name of the custom post type and the name of the slug, making this a very versatile plugin. Easily rename it to Portfolio, Projects, Towns, Cities, Neighborhoods, etc. Includes a widget to display your custom post type. Archive page settings includes changing the name of the slug.
+
+Note: This plugin is not fully translation-ready. It still needs to be completed. 
 
 CUSTOM POST TYPE NAME AND SLUG
+
 You can choose the name you want to use for the slug URL under Communities -> Settings. It defaults to ‘communities’. 
 You can also change the  singular and plural name of the custom post type. For example if Towns make more sense for you, you can change the singular name to ‘Town’, plural name to ‘Towns’ and the slug to ‘towns’. This makes this plugin versatile as it can be used outside of real estate. Other uses, portfolio, projects, etc.
 
@@ -33,7 +36,7 @@ Sorts by title (ascending A-Z).
 
 Example: http://yoursite.com/communities
 
-Will display up to 12 communities per page (four across on desktop and responsive for smaller viewport widths). (This keeps page load times fast). You can increase if needed by unhooking the function and adding a replacement hook in your functions.php 
+Will display up to 12 communities per page (four across on desktop and responsive for smaller viewport widths). (This keeps page load times fast). You can increase or change sorting option if needed by unhooking the function and adding a replacement hook in your functions.php 
 
 == Installation ==
 
@@ -60,13 +63,13 @@ Look in your Dashboard under Comments for a house icon with the name of your cus
 The code is in place, but there are still phrases in the plugin that need to be updated.
 
 ==Changelog==
+
 = 0.5.2 =
 Stylesheet changes for font sizes and removing borders on single page post display.
 = 0.5.1 =
 Updated code in functions.php to fix bug that displayed featured image on all single posts instead of just the ‘awp-community’ custom type posts.
 
 = 0.5.0 =
-
 Plugin renamed to Genesis Communities CPT. New Github location. https://github.com/savvyjackie/genesis-communities-cpt
 
 Still need to add support for languages and test.

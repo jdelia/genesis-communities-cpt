@@ -1,21 +1,21 @@
 <?php
 /**
- * Genesis AWP Communities Plugin
+ * Genesis Communities CPT Plugin
  *
  * This plugin is based on the Community Custom Post Type found in the Winning Agent Pro theme by Carrie Dils.
  * Now you can add this custom post to any Genesis child theme including the AgentPress Pro by StudioPress.  
  * Read more about why we created this plugin at http://savvyjackiedesigns.com/genesis-awp-communities-plugin/
  *
- * @package           Genesis_AWP_Communities
+ * @package           Genesis_Communities_CPT
  * @author            Jackie D'Elia
  * @license           GPL-2.0+
  * @link              http://www.savvyjackiedesigns.com
  * @copyright         2015 Jackie D'Elia
  *
- * Plugin Name:       Genesis AWP Communities
+ * Plugin Name:       Genesis Communities CPT
  * Plugin URI:        https://github.com/savvyjackie/genesis-communities-cpt
  * Description:       Adds a custom post type for Communities to any Genesis Child Theme. Includes Featured Communities Widget, Custom Archive Page and ability to edit the Custom Post Type name and slug url.
- * Version:           0.5.2
+ * Version:           0.5.3
  * Author:            Jackie D'Elia
  * Author URI:        http://www.savvyjackiedesigns.com
  * Text Domain:       genesis-awp-community
@@ -54,7 +54,7 @@ if( !defined( 'ABSPATH' ) ) {
  * @since 0.2.0
  */
 
-if( !defined( 'GENAWPCOMM_VERSION' ) )define( 'GENAWPCOMM_VERSION', '0.5.2' );
+if( !defined( 'GENAWPCOMM_VERSION' ) )define( 'GENAWPCOMM_VERSION', '0.5.3' );
 if( !defined( 'GENAWPCOMM_BASE_FILE' ) )define( 'GENAWPCOMM_BASE_FILE', __FILE__ );
 if( !defined( 'GENAWPCOMM_BASE_DIR' ) )define( 'GENAWPCOMM_BASE_DIR', dirname( GENAWPCOMM_BASE_FILE ) );
 if( !defined( 'GENAWPCOMM_PLUGIN_URL' ) )define( 'GENAWPCOMM_PLUGIN_URL', plugin_dir_url( __FILE__ ) );

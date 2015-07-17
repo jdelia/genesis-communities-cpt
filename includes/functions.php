@@ -1,5 +1,5 @@
 <?php 
-// functions for Genesis AWP Communities
+// functions for Genesis Communities CPT
 
 add_filter( 'template_include', 'genawpcomm_awp_template_include',99 );
 /**

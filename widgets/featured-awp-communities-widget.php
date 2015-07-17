@@ -2,7 +2,7 @@
 /**
  * Based off the Genesis Featured Post widget by StudioPress and Winning Agent Pro by Carrie Dils
  *
- * @package AWP Featured Communities / Widgets
+ * @package Genesis Communities CPT / Widgets
  * @author  Jackie D'Elia
  * @license GPL-2.0+
  * @link    
