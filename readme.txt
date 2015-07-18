@@ -73,6 +73,7 @@ Yes. The code is in place.
 
 = 0.6.3 =
 Removed erroneous test message.
+
 = 0.6.2 =
 Added check to make sure Genesis is still active and if not, deactivate the plugin.
 
