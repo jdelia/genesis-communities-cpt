@@ -4,9 +4,8 @@ This plugin adds a Community Custom Post Type to a Genesis Child theme, similar 
 
 ## Description
 
-This plugin adds a Community Custom Post Type to a Genesis Child theme, similar to the one in the [Winning Agent Pro theme by Carrie Dils](http://savvyjackiedesigns.com/go/winning-agent-theme). You can change the name of the custom post type and the name of the slug, making this a very versatile plugin. Easily rename it to Portfolio, Projects, Towns, Cities, Neighborhoods, etc. Includes a widget to display your custom post type.
+This plugin adds a Community Custom Post Type to a Genesis Child theme, similar to the one in the [Winning Agent Pro theme by Carrie Dils](http://savvyjackiedesigns.com/go/winning-agent-theme). You can change the name of the custom post type and the name of the slug, making this a very versatile plugin. Easily rename it to Portfolio, Projects, Towns, Cities, Neighborhoods, etc. Includes a widget to display your custom post type and lots of sorting options.
 
-Note: This plugin is not fully translation-ready. It still needs to be completed. 
 
 ## Requirements
  * WordPress 4.0
