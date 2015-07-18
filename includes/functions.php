@@ -135,7 +135,7 @@ function genawpcomm_randomise_with_pagination( $orderby ) {
         return $orderby;
     } 
     else {
-         echo 'We are in ' . is_post_type_archive( 'awp-community' );
+        
         if( is_main_query() && is_post_type_archive( 'awp-community' ) ) {
             echo 'we are in seed';
 
@@ -160,7 +160,7 @@ function genawpcomm_randomise_with_pagination( $orderby ) {
             
             // Update ORDER BY clause to use seed
             $orderby = 'RAND(' . $seed . ')';
-             echo $orderby;
+             
         }
        
         return $orderby;

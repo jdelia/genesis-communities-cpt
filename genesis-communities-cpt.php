@@ -15,7 +15,7 @@
  * Plugin Name:       Genesis Communities CPT
  * Plugin URI:        https://github.com/savvyjackie/genesis-communities-cpt
  * Description:       Adds a custom post type for Communities to any Genesis Child Theme. Includes Featured Communities Widget, Custom Archive Page and ability to edit the Custom Post Type name and slug url.
- * Version:           0.6.0
+ * Version:           0.6.2
  * Author:            Jackie D'Elia
  * Author URI:        http://www.savvyjackiedesigns.com
  * Text Domain:       genesis-awp-community
@@ -54,7 +54,7 @@ if( !defined( 'ABSPATH' ) ) {
  * @since 0.2.0
  */
 
-if( !defined( 'GENAWPCOMM_VERSION' ) )define( 'GENAWPCOMM_VERSION', '0.6.0' );
+if( !defined( 'GENAWPCOMM_VERSION' ) )define( 'GENAWPCOMM_VERSION', '0.6.2' );
 if( !defined( 'GENAWPCOMM_BASE_FILE' ) )define( 'GENAWPCOMM_BASE_FILE', __FILE__ );
 if( !defined( 'GENAWPCOMM_BASE_DIR' ) )define( 'GENAWPCOMM_BASE_DIR', dirname( GENAWPCOMM_BASE_FILE ) );
 if( !defined( 'GENAWPCOMM_PLUGIN_URL' ) )define( 'GENAWPCOMM_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
@@ -127,6 +127,39 @@ function genawpcomm_myplugin_flush_rewrites() {
     genawpcomm_create_custom_post_type();
     flush_rewrite_rules();
 }
+
+
+// Test to make sure that Genesis is still running
+if ( 'genesis' !== basename( get_template_directory() ) ) {
+     add_action( 'admin_init', 'genawpcomm_deactivate' ) ;
+     add_action( 'admin_notices', 'genawpcomm_error_message' );
+    return;
+}
+// If it is not running, let's deactivate ourselves.
+function genawpcomm_deactivate() {
+      
+      deactivate_plugins( plugin_basename( __FILE__ ) );
+      flush_rewrite_rules();
+}
+// show the message why we deactivated.
+function genawpcomm_error_message() {
+
+        $error = sprintf( __( 'Sorry, Genesis Communities CPT works only with the Genesis Framework. It has been deactivated.', 'genesis-communities-cpt' ) );
+
+        if ( version_compare( PHP_VERSION, '5.3', '<' ) ) {
+            $error = $error . sprintf(
+                __( ' But since we\'re talking anyway, did you know that your server is running PHP version %1$s, which is outdated? You should ask your host to update that for you.', 'display-featured-image-genesis' ),
+                PHP_VERSION
+            );
+        }
+        echo '<div class="error"><p>' . esc_attr( $error ) . '</p></div>';
+
+        if ( isset( $_GET['activate'] ) ) {
+            unset( $_GET['activate'] );
+        }
+
+}
+// Okay - all is good - so let's continue on.
 
 add_action( 'init', 'genawpcomm_create_custom_post_type' );
 
