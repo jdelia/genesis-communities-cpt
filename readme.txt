@@ -64,8 +64,12 @@ The code is in place, but there are still phrases in the plugin that need to be 
 
 ==Changelog==
 
+= 0.6.0 =
+Updated plugin for translations. Some file names were changed.
+
 = 0.5.2 =
 Stylesheet changes for font sizes and removing borders on single page post display.
+
 = 0.5.1 =
 Updated code in functions.php to fix bug that displayed featured image on all single posts instead of just the ‘awp-community’ custom type posts.
 

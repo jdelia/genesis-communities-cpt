@@ -1,7 +1,8 @@
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Genesis Communities CPT\n"
-"POT-Creation-Date: 2015-07-12 15:18-0400\n"
+"POT-Creation-Date: 2015-07-17 19:43-0400\n"
 "PO-Revision-Date: 2015-07-12 15:18-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -15,81 +16,184 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;esc_attr_e\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: admin/class-awp-communities.php:94
+#: admin/class-awp-communities.php:104
 msgid "Settings"
 msgstr ""
 
-#: admin/views/awp-settings.php:51
+#: admin/views/awp-settings.php:11
+msgid ""
+"If you would like to manually move the plugin's CSS to your theme's css file "
+"for purposes of avoiding an additional HTTP request or for ease of "
+"customization, check the box below."
+msgstr ""
+
+#: admin/views/awp-settings.php:32
+msgid "The plugin stylesheet is currently in use."
+msgstr ""
+
+#: admin/views/awp-settings.php:38
+msgid "The plugin stylesheet is NOT currently in use."
+msgstr ""
+
+#: admin/views/awp-settings.php:67
+msgid "Check this box if you do NOT want to use the plugin stylesheet."
+msgstr ""
+
+#: admin/views/awp-settings.php:70
+msgid "Singular Name for the Community CPT:"
+msgstr ""
+
+#: admin/views/awp-settings.php:76
+msgid "Plural Name for the Community CPT:"
+msgstr ""
+
+#: admin/views/awp-settings.php:82
+msgid "Number of Posts to show per page"
+msgstr ""
+
+#: admin/views/awp-settings.php:87
+#: widgets/featured-awp-communities-widget.php:210
+msgid "Order By"
+msgstr ""
+
+#: admin/views/awp-settings.php:89
+#: widgets/featured-awp-communities-widget.php:212
+msgid "Date"
+msgstr ""
+
+#: admin/views/awp-settings.php:90
+#: widgets/featured-awp-communities-widget.php:195
+#: widgets/featured-awp-communities-widget.php:213
+msgid "Title"
+msgstr ""
+
+#: admin/views/awp-settings.php:91
+#: widgets/featured-awp-communities-widget.php:214
+msgid "Parent"
+msgstr ""
+
+#: admin/views/awp-settings.php:92
+#: widgets/featured-awp-communities-widget.php:215
+msgid "Menu Order"
+msgstr ""
+
+#: admin/views/awp-settings.php:93
+#: widgets/featured-awp-communities-widget.php:216
+msgid "ID"
+msgstr ""
+
+#: admin/views/awp-settings.php:94
+#: widgets/featured-awp-communities-widget.php:217
+msgid "Comment Count"
+msgstr ""
+
+#: admin/views/awp-settings.php:95
+#: widgets/featured-awp-communities-widget.php:218
+msgid "Random"
+msgstr ""
+
+#: admin/views/awp-settings.php:100
+#: widgets/featured-awp-communities-widget.php:223
+msgid "Sort Order"
+msgstr ""
+
+#: admin/views/awp-settings.php:102
+#: widgets/featured-awp-communities-widget.php:225
+msgid "Descending (3, 2, 1)"
+msgstr ""
+
+#: admin/views/awp-settings.php:103
+#: widgets/featured-awp-communities-widget.php:226
+msgid "Ascending (1, 2, 3)"
+msgstr ""
+
+#: admin/views/awp-settings.php:109
+msgid "Slug for the Community Archive page:"
+msgstr ""
+
+#: admin/views/awp-settings.php:114
+msgid "If you change the slug, remember to"
+msgstr ""
+
+#: admin/views/awp-settings.php:114
+msgid "save your permalinks settings again"
+msgstr ""
+
+#: admin/views/awp-settings.php:116
 msgid "Save Settings"
 msgstr ""
 
-#: genesis-awp-communities.php:106
+#: admin/views/awp-settings.php:120
+msgid "Your Community archive page is located at"
+msgstr ""
+
+#: genesis-communities-cpt.php:105
 #, php-format
 msgid ""
 "Whoa.. this plugin requires that you have installed the %1$sGenesis "
 "Framework version %2$s%3$s or greater."
 msgstr ""
 
-#: genesis-awp-communities.php:114
+#: genesis-communities-cpt.php:113
 #, php-format
 msgid ""
 "Oops.. you need to update to the latest version of the %1$sGenesis Framework "
 "version %2$s%3$s or greater to install this plugin."
 msgstr ""
 
-#: genesis-awp-communities.php:168
+#: genesis-communities-cpt.php:169
 msgid "Add New"
 msgstr ""
 
-#: genesis-awp-communities.php:169
+#: genesis-communities-cpt.php:170
 msgid "Add New "
 msgstr ""
 
-#: genesis-awp-communities.php:170
+#: genesis-communities-cpt.php:171
 msgid "New "
 msgstr ""
 
-#: genesis-awp-communities.php:171
+#: genesis-communities-cpt.php:172
 msgid "Edit "
 msgstr ""
 
-#: genesis-awp-communities.php:172
+#: genesis-communities-cpt.php:173
 msgid "View "
 msgstr ""
 
-#: genesis-awp-communities.php:173
+#: genesis-communities-cpt.php:174
 msgid "All "
 msgstr ""
 
-#: genesis-awp-communities.php:174
+#: genesis-communities-cpt.php:175
 msgid "Search "
 msgstr ""
 
-#: genesis-awp-communities.php:175
+#: genesis-communities-cpt.php:176
 msgid "Parent "
 msgstr ""
 
-#: genesis-awp-communities.php:176 genesis-awp-communities.php:177
+#: genesis-communities-cpt.php:177 genesis-communities-cpt.php:178
 msgid "No "
 msgstr ""
 
-#: genesis-awp-communities.php:176
+#: genesis-communities-cpt.php:177
 msgid " found."
 msgstr ""
 
-#: genesis-awp-communities.php:177
+#: genesis-communities-cpt.php:178
 msgid " found in Trash."
 msgstr ""
 
-#: genesis-awp-communities.php:222
+#: genesis-communities-cpt.php:223
 msgid "awp-feature-community"
 msgstr ""
 
-#: genesis-awp-communities.php:223
+#: genesis-communities-cpt.php:224
 msgid "awp-feature-small"
 msgstr ""
 
-#: genesis-awp-communities.php:224
+#: genesis-communities-cpt.php:225
 msgid "awp-feature-wide"
 msgstr ""
 
@@ -98,12 +202,7 @@ msgid "Displays featured communities with thumbnails"
 msgstr ""
 
 #: widgets/featured-awp-communities-widget.php:52
-msgid "AWP Featured Communities"
-msgstr ""
-
-#: widgets/featured-awp-communities-widget.php:195
-#: widgets/featured-awp-communities-widget.php:213
-msgid "Title"
+msgid "Genesis Communities CPT"
 msgstr ""
 
 #: widgets/featured-awp-communities-widget.php:200
@@ -112,46 +211,6 @@ msgstr ""
 
 #: widgets/featured-awp-communities-widget.php:205
 msgid "Number of Posts to Offset"
-msgstr ""
-
-#: widgets/featured-awp-communities-widget.php:210
-msgid "Order By"
-msgstr ""
-
-#: widgets/featured-awp-communities-widget.php:212
-msgid "Date"
-msgstr ""
-
-#: widgets/featured-awp-communities-widget.php:214
-msgid "Parent"
-msgstr ""
-
-#: widgets/featured-awp-communities-widget.php:215
-msgid "Menu Order"
-msgstr ""
-
-#: widgets/featured-awp-communities-widget.php:216
-msgid "ID"
-msgstr ""
-
-#: widgets/featured-awp-communities-widget.php:217
-msgid "Comment Count"
-msgstr ""
-
-#: widgets/featured-awp-communities-widget.php:218
-msgid "Random"
-msgstr ""
-
-#: widgets/featured-awp-communities-widget.php:223
-msgid "Sort Order"
-msgstr ""
-
-#: widgets/featured-awp-communities-widget.php:225
-msgid "Descending (3, 2, 1)"
-msgstr ""
-
-#: widgets/featured-awp-communities-widget.php:226
-msgid "Ascending (1, 2, 3)"
 msgstr ""
 
 #: widgets/featured-awp-communities-widget.php:234

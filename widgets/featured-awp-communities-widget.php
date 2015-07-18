@@ -40,7 +40,7 @@ class AWP_Featured_Communities extends WP_Widget {
 
 		$widget_ops = array(
 			'classname'   => 'featured-content featured-community',
-			'description' => __( 'Displays featured communities with thumbnails', 'awp' ),
+			'description' => __( 'Displays featured communities with thumbnails', GENAWPCOMM_DOMAIN ),
 		);
 
 		$control_ops = array(
@@ -49,7 +49,7 @@ class AWP_Featured_Communities extends WP_Widget {
 			'height'  => 350,
 		);
 
-		parent::__construct( 'featured-community', __( 'AWP Featured Communities', 'awp' ), $widget_ops, $control_ops );
+		parent::__construct( 'featured-community', __( 'Genesis Communities CPT', GENAWPCOMM_DOMAIN ), $widget_ops, $control_ops );
 
 	}
 
@@ -74,7 +74,6 @@ class AWP_Featured_Communities extends WP_Widget {
 
 		//* Set up the widget title
 		if ( ! empty( $instance['title'] ) )
-			//echo $before_title . apply_filters( 'widget_title', $instance['title'], $instance, $this->id_base ) . $after_title;
 			echo '<h2 class="widget-title widgettitle">'  . apply_filters( 'widget_title', $instance['title'], $instance, $this->id_base ) . '</h2>';
 
 		$query_args = array(

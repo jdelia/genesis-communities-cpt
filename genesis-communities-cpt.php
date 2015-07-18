@@ -15,13 +15,13 @@
  * Plugin Name:       Genesis Communities CPT
  * Plugin URI:        https://github.com/savvyjackie/genesis-communities-cpt
  * Description:       Adds a custom post type for Communities to any Genesis Child Theme. Includes Featured Communities Widget, Custom Archive Page and ability to edit the Custom Post Type name and slug url.
- * Version:           0.5.3
+ * Version:           0.6.0
  * Author:            Jackie D'Elia
  * Author URI:        http://www.savvyjackiedesigns.com
  * Text Domain:       genesis-awp-community
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       genesis-awp-communities
+ * Text Domain:       genesis-communities-cpt
  * Domain Path:       /languages/
  * Function prefix:   genawpcomm_
  * GitHub Plugin URI: https://github.com/savvyjackie/genesis-communities-cpt
@@ -54,7 +54,7 @@ if( !defined( 'ABSPATH' ) ) {
  * @since 0.2.0
  */
 
-if( !defined( 'GENAWPCOMM_VERSION' ) )define( 'GENAWPCOMM_VERSION', '0.5.3' );
+if( !defined( 'GENAWPCOMM_VERSION' ) )define( 'GENAWPCOMM_VERSION', '0.6.0' );
 if( !defined( 'GENAWPCOMM_BASE_FILE' ) )define( 'GENAWPCOMM_BASE_FILE', __FILE__ );
 if( !defined( 'GENAWPCOMM_BASE_DIR' ) )define( 'GENAWPCOMM_BASE_DIR', dirname( GENAWPCOMM_BASE_FILE ) );
 if( !defined( 'GENAWPCOMM_PLUGIN_URL' ) )define( 'GENAWPCOMM_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
@@ -67,7 +67,7 @@ define( 'GENAWPCOMM_SETTINGS_FIELD', 'genawpcomm-settings' );
  *
  * @since 0.2.0
  */
-define( 'GENAWPCOMM_DOMAIN', 'genesis-awp-communities' );
+define( 'GENAWPCOMM_DOMAIN', 'genesis-communities-cpt' );
 
 /**
  * Load the text domain for translation of the plugin
@@ -75,8 +75,7 @@ define( 'GENAWPCOMM_DOMAIN', 'genesis-awp-communities' );
  * @since 0.2.0
  */
 
-
-load_plugin_textdomain( 'genesis-awp-communities', false, 'genesis-communities-cpt/languages/' );
+load_plugin_textdomain( 'genesis-communities-cpt', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
 register_activation_hook( __FILE__, 'genawpcomm_activation_check' );
 
@@ -159,22 +158,24 @@ function genawpcomm_create_custom_post_type() {
     }
 
     
+
+    
     $args    = apply_filters( 'awp_community_post_type_args', array(
         'labels' => array(
         'name'               => $options['plural_name'],
         'singular_name'      => $options['singular_name'],
         'menu_name'          => $options['plural_name'] ,
         'name_admin_bar'     => $options['singular_name'],
-        'add_new'            => __( 'Add New', 'genesis-awp-communities' ),
-        'add_new_item'       => __( 'Add New ', 'genesis-awp-communities' ) . $options['singular_name'],
-        'new_item'           => __( 'New ', 'genesis-awp-communities' ) . $options['singular_name'],
-        'edit_item'          => __( 'Edit ', 'genesis-awp-communities' ) . $options['singular_name'],
-        'view_item'          => __( 'View ', 'genesis-awp-communities' ) . $options['singular_name'],
-        'all_items'          => __( 'All ', 'genesis-awp-communities' ) . $options['plural_name'],
-        'search_items'       => __( 'Search ', 'genesis-awp-communities' ) . $options['plural_name'],
-        'parent_item_colon'  => __( 'Parent ', 'genesis-awp-communities' ) . $options['plural_name'] . ':',
-        'not_found'          => __( 'No ', 'genesis-awp-communities' ) .  $options['plural_name'] . __( ' found.', 'genesis-awp-communities' ),
-        'not_found_in_trash' => __( 'No ', 'genesis-awp-communities' ) .  $options['plural_name'] . __( ' found in Trash.', 'genesis-awp-communities' ),
+        'add_new'            => __( 'Add New', 'genesis-communities-cpt' ),
+        'add_new_item'       => __( 'Add New ', 'genesis-communities-cpt' ) . $options['singular_name'],
+        'new_item'           => __( 'New ', 'genesis-communities-cpt' ) . $options['singular_name'],
+        'edit_item'          => __( 'Edit ', 'genesis-communities-cpt' ) . $options['singular_name'],
+        'view_item'          => __( 'View ', 'genesis-communities-cpt' ) . $options['singular_name'],
+        'all_items'          => __( 'All ', 'genesis-communities-cpt' ) . $options['plural_name'],
+        'search_items'       => __( 'Search ', 'genesis-communities-cpt' ) . $options['plural_name'],
+        'parent_item_colon'  => __( 'Parent ', 'genesis-communities-cpt' ) . $options['plural_name'] . ':',
+        'not_found'          => __( 'No ', 'genesis-communities-cpt' ) .  $options['plural_name'] . __( ' found.', 'genesis-communities-cpt' ),
+        'not_found_in_trash' => __( 'No ', 'genesis-communities-cpt' ) .  $options['plural_name'] . __( ' found in Trash.', 'genesis-communities-cpt' ),
         ) ,
         'has_archive' => true,
         'hierarchical' => true,
@@ -219,9 +220,9 @@ function genawpcomm_create_custom_post_type() {
     add_filter( 'image_size_names_choose', 'genawpcomm_my_custom_sizes' );
     function genawpcomm_my_custom_sizes( $sizes ) {
         return array_merge( $sizes, array(
-            'awp-feature-community'              => __( 'awp-feature-community' ),
-            'awp-feature-small'              => __( 'awp-feature-small' ),
-            'awp-feature-wide'              => __( 'awp-feature-wide' )
+            'awp-feature-community'              => __( 'awp-feature-community','genesis-communities-cpt' ),
+            'awp-feature-small'              => __( 'awp-feature-small','genesis-communities-cpt' ),
+            'awp-feature-wide'              => __( 'awp-feature-wide','genesis-communities-cpt' )
         ) );
     }
     
@@ -254,9 +255,9 @@ function genawpcomm_register_widget() {
     
     register_widget( 'AWP_Featured_Communities' );
 }
-require_once( dirname( __FILE__ ) . '/includes/functions.php' );
-require_once( dirname( __FILE__ ) . '/widgets/featured-awp-communities-widget.php' );
-require_once( dirname( __FILE__ ) . '/admin/class-awp-communities.php' );
+require_once( GENAWPCOMM_BASE_DIR . '/includes/functions.php' );
+require_once( GENAWPCOMM_BASE_DIR . '/widgets/featured-awp-communities-widget.php' );
+require_once( GENAWPCOMM_BASE_DIR . '/admin/class-awp-communities.php' );
 
 /** Instantiate */
 $_awp_community = new AWP_Communities;
