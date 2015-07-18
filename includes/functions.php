@@ -137,8 +137,7 @@ function genawpcomm_randomise_with_pagination( $orderby ) {
     else {
         
         if( is_main_query() && is_post_type_archive( 'awp-community' ) ) {
-            echo 'we are in seed';
-
+           
             // Reset seed on load of initial archive page
             if( !get_query_var( 'paged' ) || get_query_var( 'paged' ) == 0 || get_query_var( 'paged' ) == 1 ) {
                 if( isset( $_SESSION['seed'] ) ) {

@@ -5,7 +5,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: genesis, real estate, genesis framework, communities, towns, portfolio, custom post type
 Requires at least: 4.0.0
 Tested up to: 4.2.2
-Stable tag: 0.6.2
+Stable tag: 0.6.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -71,6 +71,8 @@ Yes. The code is in place.
 
 ==Changelog==
 
+= 0.6.3 =
+Removed erroneous test message.
 = 0.6.2 =
 Added check to make sure Genesis is still active and if not, deactivate the plugin.
 
@@ -110,6 +112,9 @@ Updated plugin with function prefix to avoid conflicts. Updated Readme.txt and i
 Initial Release.
 
 ==Upgrade Notice==
+
+= 0.6.3 =
+Bug fix. Removed erroneous test message.
 
 = 0.6.2 =
 Bug fix. Automatically deactivate plugin, if the Genesis theme is deactivated.

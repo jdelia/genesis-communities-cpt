@@ -43,9 +43,6 @@
 					$awp_options['num_posts'] = '8';
 				}
 
-//echo $awp_options['order_by'];
-//echo $awp_options['sort_order'];
-
 				if ( !isset($awp_options['order_by']) ) {
 					$awp_options['order_by'] = 'title';
 				}
@@ -76,7 +73,8 @@
 					<?php printf( __( 'Plural Name for the Community CPT:', 'genesis-communities-cpt' ) ); ?>
 					<?php echo '<input type="text" name="plugin_awp_community_settings[plural_name]" value="' . wp_strip_all_tags($awp_options['plural_name']) . '" />'; ?>
 					</label></p>
-
+					
+					<h2><?php printf( __( 'Options for the Archive Page', 'genesis-communities-cpt' ) ); ?>:</h2>
 					
 					<label for="<?php echo 'plugin_awp_community_settings[num_posts]'; ?>">
 					<?php printf( __( 'Number of Posts to show per page', 'genesis-communities-cpt' ) ); ?>:
