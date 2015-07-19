@@ -107,9 +107,20 @@ add_action( 'pre_get_posts', 'genawpcomm_awp_community_change_sort_order_custom'
 function genawpcomm_awp_community_change_sort_order_custom( $query ) {
     
     $awp_options    = get_option( 'plugin_awp_community_settings' );
+  
+    
     if( !isset( $awp_options['num_posts'] ) ) {
         $awp_options['num_posts']                = '8';
     }
+    
+    if( !isset( $awp_options['order_by'] ) ) {
+        $awp_options['order_by']                = 'title';
+    }
+    
+    if( !isset( $awp_options['sort_order'] ) ) {
+        $awp_options['sort_order']                = 'ASC';
+    }
+    
     $posts_per_page = intval( $awp_options['num_posts'] );
     $order_by       = $awp_options['order_by'];
     $sort_order     = $awp_options['sort_order'];
@@ -129,7 +140,7 @@ session_start();
 
 add_filter( 'posts_orderby', 'genawpcomm_randomise_with_pagination' );
 function genawpcomm_randomise_with_pagination( $orderby ) {
-   
+    
     $pos = stripos( $orderby, "RAND" );
     if( $pos === false ) {
         return $orderby;
@@ -137,7 +148,7 @@ function genawpcomm_randomise_with_pagination( $orderby ) {
     else {
         
         if( is_main_query() && is_post_type_archive( 'awp-community' ) ) {
-           
+            
             // Reset seed on load of initial archive page
             if( !get_query_var( 'paged' ) || get_query_var( 'paged' ) == 0 || get_query_var( 'paged' ) == 1 ) {
                 if( isset( $_SESSION['seed'] ) ) {
@@ -159,9 +170,8 @@ function genawpcomm_randomise_with_pagination( $orderby ) {
             
             // Update ORDER BY clause to use seed
             $orderby = 'RAND(' . $seed . ')';
-             
         }
-       
+        
         return $orderby;
     }
 }
