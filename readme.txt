@@ -5,7 +5,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: genesis, real estate, genesis framework, communities, towns, portfolio, custom post type
 Requires at least: 4.0.0
 Tested up to: 4.2.2
-Stable tag: 0.6.4
+Stable tag: 0.6.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -72,6 +72,8 @@ Yes. The code is in place.
 3. Sample Detail page for Genesis Communities CPT.
 
 ==Changelog==
+= 0.6.5 =
+Bug fix: Updated plugin stylesheet to correct centering on media queries for archive page.
 
 = 0.6.4 =
 Bug fix: New sorting options not initialized properly when updating to version 0.6.3
@@ -118,6 +120,8 @@ Updated plugin with function prefix to avoid conflicts. Updated Readme.txt and i
 Initial Release.
 
 ==Upgrade Notice==
+= 0.6.5 =
+Updates plugin stylesheet to correct centering on media queries for archive page.
 
 = 0.6.4 =
 Bug fix: New sorting options not initialized properly when updating to version 0.6.3

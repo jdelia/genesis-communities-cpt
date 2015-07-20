@@ -6,13 +6,22 @@
 	overflow: hidden;
 }
 
+.awp-community-archive .site-inner  {
+	padding-left: 0;
+}
+
 .awp-community-archive .archive-title,
 .featured-community .widget-title {
 	text-align: center;
 	font-size: 24px;
 	margin-bottom: 40px;
-	
+
 }
+.awp-community-archive .archive-description {
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
 
 .featured-community .awp-community {
 	display: inline-block;
@@ -99,9 +108,9 @@
 	}
 	.featured-community .awp-community.entry img,
 	.archive .awp-community.entry img {
-	
+		
 		width:440px;
-	
+		
 	}
 
 	.awp-community-image {
@@ -137,7 +146,40 @@
 
 }
 
+@media only screen and (max-width: 1024px) {
+	
+
+	.featured-community .awp-community {
+
+		width: 400px;
+
+	}
+	.featured-community .awp-community.entry img,
+	.archive .awp-community.entry img {
+
+		width: 400px;
+
+
+	}
+
+	.awp-community-image {
+		width: 400px;
+	}
+
+	.sidebar .featured-community .entry-title {
+		font-size: 20px;
+		
+	}
+}
+
 @media only screen and (max-width: 800px) {
+
+	.awp-community-archive .site-inner  {
+		
+		padding-left: 5%;
+		padding-right: 5%;
+
+	}
 	.featured-community .awp-community {
 
 		width: 300px;
@@ -162,6 +204,9 @@
 }
 
 @media only screen and (max-width: 600px) {
+	
+
+
 	.sidebar .featured-community .awp-community,
 	.featured-community .awp-community {
 
