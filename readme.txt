@@ -15,7 +15,7 @@ This plugin adds a Community Custom Post Type to a Genesis Child theme, similar 
 
 **Note: This plugin requires the Genesis Framework.**
 
-Read more about why I wrote this plugin along with examples here: [Genesis Communities CPT Plugin] http://savvyjackiedesigns.com/genesis-communities-cpt-plugin/
+Read more about why I wrote this plugin along with examples here: [Genesis Communities CPT Plugin](http://savvyjackiedesigns.com/genesis-communities-cpt-plugin/)
 
 **CUSTOM POST TYPE NAME AND SLUG**
 
