@@ -1,6 +1,5 @@
 /* Styles for Genesis AWP Community Plugin */
 
-
 .featured-community {
 	text-align: center;
 	overflow: hidden;
@@ -34,6 +33,7 @@
 	overflow: hidden;
 }
 
+.sidebar .widget .awp-community.entry,
 .awp-community.entry {
 	border: 1px solid #e5e5e5;
 	margin: 0 15px 20px;

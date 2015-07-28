@@ -5,7 +5,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: genesis, real estate, genesis framework, communities, towns, portfolio, custom post type
 Requires at least: 4.0.0
 Tested up to: 4.2.2
-Stable tag: 0.6.5
+Stable tag: 0.6.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -59,7 +59,7 @@ Yes. Install the plugin into your active Genesis Child theme.
 
 = How do I know if the plugin is working? =
 
-Look in your Dashboard under Comments for a house icon with the name of your custom post type (Defaults to Communities).
+Look in your Dashboard for a house icon with the name of your custom post type (Defaults to Communities).
 
 = Is this plugin translation ready? =
 
@@ -72,6 +72,9 @@ Yes. The code is in place.
 3. Sample Detail page for Genesis Communities CPT.
 
 ==Changelog==
+= 0.6.6 =
+Bug fix: Updated plugin stylesheet to correct border on widget sidebar.
+
 = 0.6.5 =
 Bug fix: Updated plugin stylesheet to correct centering on media queries for archive page.
 
@@ -120,6 +123,9 @@ Updated plugin with function prefix to avoid conflicts. Updated Readme.txt and i
 Initial Release.
 
 ==Upgrade Notice==
+= 0.6.6 =
+Updates plugin stylesheet for border on widget.
+
 = 0.6.5 =
 Updates plugin stylesheet to correct centering on media queries for archive page.
 
