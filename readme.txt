@@ -72,6 +72,9 @@ Yes. The code is in place.
 3. Sample Detail page for Genesis Communities CPT.
 
 ==Changelog==
+= 0.6.7 =
+Update to avoid conflict with Contact Form 7 hiding the Genesis Communities CPT menu from the Dashboard. Changed menu_position in register_post_type() to 21 from 25.
+
 = 0.6.6 =
 Bug fix: Updated plugin stylesheet to correct border on widget sidebar.
 
@@ -123,6 +126,9 @@ Updated plugin with function prefix to avoid conflicts. Updated Readme.txt and i
 Initial Release.
 
 ==Upgrade Notice==
+= 0.6.7 =
+Update to avoid conflict with Contact Form 7 hiding the Genesis Communities CPT menu from the Dashboard.
+
 = 0.6.6 =
 Updates plugin stylesheet for border on widget.
 
