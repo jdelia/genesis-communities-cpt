@@ -4,8 +4,8 @@ Contributors: JDELIA
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WRXXR5TR8NXQW
 Tags: genesis, real estate, genesis framework, communities, towns, portfolio, custom post type
 Requires at least: 4.0.0
-Tested up to: 4.2.2
-Stable tag: 0.6.7
+Tested up to: 4.4.1
+Stable tag: 0.6.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -72,6 +72,8 @@ Yes. The code is in place.
 3. Sample Detail page for Genesis Communities CPT.
 
 ==Changelog==
+= 0.6.8 = 
+Bug fix - corrects duplicated featured image on single community post type when using the Winning Agent Pro theme.
 = 0.6.7 =
 Update to avoid conflict with Contact Form 7 hiding the Genesis Communities CPT menu from the Dashboard. Changed menu_position in register_post_type() to 21 from 25.
 
@@ -126,6 +128,8 @@ Updated plugin with function prefix to avoid conflicts. Updated Readme.txt and i
 Initial Release.
 
 ==Upgrade Notice==
+= 0.6.8 = 
+Bug fix - corrects duplicated featured image on single community post type when using the Winning Agent Pro theme.
 = 0.6.7 =
 Update to avoid conflict with Contact Form 7 hiding the Genesis Communities CPT menu from the Dashboard.
 

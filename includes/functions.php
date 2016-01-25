@@ -79,6 +79,11 @@ function build_taxonomies() {
 add_action( 'genesis_before_entry_content', 'genawpcomm_awp_featured_image' );
 function genawpcomm_awp_featured_image() {
     global $post;
+
+    // return if using Winning Agent Theme which already provides this
+    if (post_type_exists( 'wap-community' )) {
+      return;
+    }
     
     // only run if on custom post type and on single post
     if( is_singular( 'awp-community' ) ) {
