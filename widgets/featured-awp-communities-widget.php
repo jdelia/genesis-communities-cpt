@@ -44,12 +44,12 @@ class AWP_Featured_Communities extends WP_Widget {
 		);
 
 		$control_ops = array(
-			'id_base' => 'featured-community',
+			'id_base' => 'awp-featured-community',
 			'width'   => 200,
 			'height'  => 350,
 		);
 
-		parent::__construct( 'featured-community', __( 'Genesis Communities CPT', GENAWPCOMM_DOMAIN ), $widget_ops, $control_ops );
+		parent::__construct( 'awp-featured-community', __( 'Genesis Communities CPT', GENAWPCOMM_DOMAIN ), $widget_ops, $control_ops );
 
 	}
 
