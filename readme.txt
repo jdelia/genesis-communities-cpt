@@ -4,7 +4,7 @@ Contributors: JDELIA
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WRXXR5TR8NXQW
 Tags: genesis, real estate, genesis framework, communities, towns, portfolio, custom post type
 Requires at least: 4.0.0
-Tested up to: 4.4.1
+Tested up to: 4.5.2
 Stable tag: 0.6.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -72,9 +72,8 @@ Yes. The code is in place.
 3. Sample Detail page for Genesis Communities CPT.
 
 ==Changelog==
-= 0.6.9 =
-Corrected bug that prevented creation of Genesis Community CPT Featured widget when using with the Winning Agent Pro theme (only).
-
+= 0.6.9 = 
+Disabled random sort on archive page with pagination. Was producing unexpected results and may have also caused an issue using session_start() improperly.
 = 0.6.8.1 =
 Oops. Error with version number. Corrected
 = 0.6.8 = 
@@ -133,9 +132,6 @@ Updated plugin with function prefix to avoid conflicts. Updated Readme.txt and i
 Initial Release.
 
 ==Upgrade Notice==
-
-= 0.6.9 =
-Corrected bug that prevented creation of Genesis Community CPT Featured widget when using with the Winning Agent Pro theme (only).
 
 = 0.6.8.1 =
 Oops. Error with version number. Corrected.

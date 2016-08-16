@@ -141,7 +141,7 @@ function genawpcomm_awp_community_change_sort_order_custom( $query ) {
     }
 }
 
-session_start();
+//session_start();
 
 add_filter( 'posts_orderby', 'genawpcomm_randomise_with_pagination' );
 function genawpcomm_randomise_with_pagination( $orderby ) {
@@ -152,30 +152,30 @@ function genawpcomm_randomise_with_pagination( $orderby ) {
     } 
     else {
         
-        if( is_main_query() && is_post_type_archive( 'awp-community' ) ) {
+        // if( is_main_query() && is_post_type_archive( 'awp-community' ) ) {
             
-            // Reset seed on load of initial archive page
-            if( !get_query_var( 'paged' ) || get_query_var( 'paged' ) == 0 || get_query_var( 'paged' ) == 1 ) {
-                if( isset( $_SESSION['seed'] ) ) {
-                    unset( $_SESSION['seed'] );
-                }
-            }
+        //     // Reset seed on load of initial archive page
+        //     if( !get_query_var( 'paged' ) || get_query_var( 'paged' ) == 0 || get_query_var( 'paged' ) == 1 ) {
+        //         if( isset( $_SESSION['seed'] ) ) {
+        //             unset( $_SESSION['seed'] );
+        //         }
+        //     }
             
-            // Get seed from session variable if it exists
-            $seed    = false;
-            if( isset( $_SESSION['seed'] ) ) {
-                $seed    = $_SESSION['seed'];
-            }
+        //     // Get seed from session variable if it exists
+        //     $seed    = false;
+        //     if( isset( $_SESSION['seed'] ) ) {
+        //         $seed    = $_SESSION['seed'];
+        //     }
             
-            // Set new seed if none exists
-            if( !$seed ) {
-                $seed    = rand();
-                $_SESSION['seed']         = $seed;
-            }
+        //     // Set new seed if none exists
+        //     if( !$seed ) {
+        //         $seed    = rand();
+        //         $_SESSION['seed']         = $seed;
+        //     }
             
-            // Update ORDER BY clause to use seed
-            $orderby = 'RAND(' . $seed . ')';
-        }
+        //     // Update ORDER BY clause to use seed
+        //     $orderby = 'RAND(' . $seed . ')';
+        //}
         
         return $orderby;
     }

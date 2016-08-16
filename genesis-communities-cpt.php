@@ -54,7 +54,7 @@ if( !defined( 'ABSPATH' ) ) {
  * @since 0.2.0
  */
 
-if( !defined( 'GENAWPCOMM_VERSION' ) )define( 'GENAWPCOMM_VERSION', '0.6.9' );
+if( !defined( 'GENAWPCOMM_VERSION' ) )define( 'GENAWPCOMM_VERSION', '0.6.8.1' );
 if( !defined( 'GENAWPCOMM_BASE_FILE' ) )define( 'GENAWPCOMM_BASE_FILE', __FILE__ );
 if( !defined( 'GENAWPCOMM_BASE_DIR' ) )define( 'GENAWPCOMM_BASE_DIR', dirname( GENAWPCOMM_BASE_FILE ) );
 if( !defined( 'GENAWPCOMM_PLUGIN_URL' ) )define( 'GENAWPCOMM_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
