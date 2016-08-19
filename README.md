@@ -43,7 +43,7 @@ Check out the Codex for more information about [installing plugins manually](htt
 
 Using git, browse to your `/wp-content/plugins/` directory and clone this repository:
 
-`git clone git@github.com:savvyjackie/genesis-communities-cpt.git`
+`git clone git@github.com:jdelia/genesis-communities-cpt.git`
 
 Then go to your Plugins screen and click __Activate__.
 
