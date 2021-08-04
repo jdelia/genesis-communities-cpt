@@ -1,5 +1,6 @@
 /* Styles for Genesis AWP Community Plugin */
 
+
 .featured-community {
 	text-align: center;
 	overflow: hidden;
@@ -33,7 +34,6 @@
 	overflow: hidden;
 }
 
-.sidebar .widget .awp-community.entry,
 .awp-community.entry {
 	border: 1px solid #e5e5e5;
 	margin: 0 15px 20px;
@@ -76,15 +76,16 @@
 
 
 .featured-community h2.entry-title {
-	margin-bottom: 0; 
+	margin-bottom: 0;
 }
 
 .featured-community .entry-title {
 	padding: 20px 20px 0 20px;
 	text-transform: uppercase;
 	text-align: center;
-	font-size: 18px; 
+	font-size: 18px;
 }
+.awp-community-archive .entry-title,
 .archive .awp-community-image .entry-title,
 .sidebar .featured-community .entry-title {
 	padding: 20px;
@@ -108,9 +109,9 @@
 	}
 	.featured-community .awp-community.entry img,
 	.archive .awp-community.entry img {
-		
+
 		width:440px;
-		
+
 	}
 
 	.awp-community-image {
@@ -141,13 +142,13 @@
 		text-transform: uppercase;
 		text-align: center;
 		font-size: 12px;
-		
+
 	}
 
 }
 
 @media only screen and (max-width: 1024px) {
-	
+
 
 	.featured-community .awp-community {
 
@@ -168,14 +169,14 @@
 
 	.sidebar .featured-community .entry-title {
 		font-size: 20px;
-		
+
 	}
 }
 
 @media only screen and (max-width: 800px) {
 
 	.awp-community-archive .site-inner  {
-		
+
 		padding-left: 5%;
 		padding-right: 5%;
 
@@ -199,12 +200,12 @@
 
 	.sidebar .featured-community .entry-title {
 		font-size: 20px;
-		
+
 	}
 }
 
 @media only screen and (max-width: 600px) {
-	
+
 
 
 	.sidebar .featured-community .awp-community,
@@ -233,6 +234,6 @@
 	.sidebar .featured-community .entry-title,
 	.featured-community .entry-title {
 		font-size: 18px;
-		
+
 	}
 }

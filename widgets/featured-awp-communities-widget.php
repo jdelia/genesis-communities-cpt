@@ -5,7 +5,7 @@
  * @package Genesis Communities CPT / Widgets
  * @author  Jackie D'Elia
  * @license GPL-2.0+
- * @link    
+ * @link
  */
 /**
  * AWP Featured Community widget class.
@@ -28,8 +28,8 @@ class AWP_Featured_Communities extends WP_Widget {
 			'title'                   => '',
 			'posts_num'               => 1,
 			'posts_offset'            => 0,
-			'orderby'                 => '',
-			'order'                   => '',
+			'orderby'                 => 'title',
+			'order'                   => 'ASC',
 			'show_image'              => 0,
 			'image_size'              => '',
 			'show_title'              => 0,
@@ -44,19 +44,19 @@ class AWP_Featured_Communities extends WP_Widget {
 		);
 
 		$control_ops = array(
-			'id_base' => 'awp-featured-community',
+			'id_base' => 'featured-community',
 			'width'   => 200,
 			'height'  => 350,
 		);
 
-		parent::__construct( 'awp-featured-community', __( 'Genesis Communities CPT', GENAWPCOMM_DOMAIN ), $widget_ops, $control_ops );
+		parent::__construct( 'featured-community', __( 'Genesis Communities CPT', GENAWPCOMM_DOMAIN ), $widget_ops, $control_ops );
 
 	}
 
 	/**
 	 * Echo the widget content.
 	 *
-     * @since 0.2.0
+	 * @since 0.2.0
 	 *
 	 * @param array $args Display arguments including before_title, after_title, before_widget, and after_widget.
 	 * @param array $instance The settings for the particular instance of the widget
@@ -67,14 +67,15 @@ class AWP_Featured_Communities extends WP_Widget {
 
 		extract( $args );
 
-		//* Merge with defaults
+		// * Merge with defaults
 		$instance = wp_parse_args( (array) $instance, $this->defaults );
 
 		echo $before_widget;
 
-		//* Set up the widget title
-		if ( ! empty( $instance['title'] ) )
+		// * Set up the widget title
+		if ( ! empty( $instance['title'] ) ) {
 			echo '<h2 class="widget-title widgettitle">'  . apply_filters( 'widget_title', $instance['title'], $instance, $this->id_base ) . '</h2>';
+		}
 
 		$query_args = array(
 			'post_type' => 'awp-community',
@@ -88,67 +89,66 @@ class AWP_Featured_Communities extends WP_Widget {
 
 		if ( have_posts() ) : while ( have_posts() ) : the_post();
 
-			genesis_markup( array(
-				'html5'   => '<article %s>',
-				'xhtml'   => sprintf( '<div class="%s">', implode( ' ', get_post_class() ) ),
-				'context' => 'entry',
-			) );
+				genesis_markup( array(
+					'html5'   => '<article %s>',
+					'xhtml'   => sprintf( '<div class="%s">', implode( ' ', get_post_class() ) ),
+					'context' => 'entry',
+				) );
 
-			$image = genesis_get_image( array(
-				'format'  => 'html',
-				'size'    => $instance['image_size'],
-				'context' => 'featured-community-widget',
-				'attr'    => genesis_parse_attr( 'entry-image-widget' ),
-			) );
+				$image = genesis_get_image( array(
+					'format'  => 'html',
+					'size'    => $instance['image_size'],
+					'context' => 'featured-community-widget',
+					'attr'    => genesis_parse_attr( 'entry-image-widget' ),
+				) );
 
-			if ( $instance['show_image'] && $image )
-				printf( '<div class="awp-community-image"><a href="%s" title="%s" class="%s">%s</a></div>', get_permalink(), the_title_attribute( 'echo=0' ), 'awp-community-link', $image );
+				if ( $instance['show_image'] && $image ) {
+					printf( '<div class="awp-community-image"><a href="%s" title="%s" class="%s">%s</a></div>', get_permalink(), the_title_attribute( 'echo=0' ), 'awp-community-link', $image );
+				}
 
-
-			if ( $instance['show_title'] ) {
-				echo '<header class="entry-header">';
+				if ( $instance['show_title'] ) {
+					echo '<header class="entry-header">';
 					printf( '<h3 class="entry-title"><a href="%s" title="%s">%s</a></h3>', get_permalink(), the_title_attribute( 'echo=0' ), get_the_title() );
-				echo '</header>';
-			}
-
-			if ( ! empty( $instance['show_content'] ) ) {
-
-				echo '<div class="entry-content">';
-
-				if ( 'excerpt' == $instance['show_content'] ) {
-					$current_excerpt = get_the_excerpt();
-					echo $current_excerpt;
-					//the_excerpt();
-				}
-				elseif ( 'content-limit' == $instance['show_content'] ) {
-					the_content_limit( (int) $instance['content_limit'], esc_html( $instance['more_text'] ) );
-				}
-				else {
-
-					global $more;
-
-					$orig_more = $more;
-					$more = 0;
-
-					the_content( esc_html( $instance['more_text'] ) );
-
-					$more = $orig_more;
-
+					echo '</header>';
 				}
 
-				echo '</div>';
+				if ( ! empty( $instance['show_content'] ) ) {
 
-			}
+					echo '<div class="entry-content">';
 
-			genesis_markup( array(
-				'html5' => '</article>',
-				'xhtml' => '</div>',
-			) );
+					if ( 'excerpt' == $instance['show_content'] ) {
+						$current_excerpt = get_the_excerpt();
+						echo $current_excerpt;
+						// the_excerpt();
+					} elseif ( 'content-limit' == $instance['show_content'] ) {
+						the_content_limit( (int) $instance['content_limit'], esc_html( $instance['more_text'] ) );
+					} else {
 
-		endwhile; endif;
+						global $more;
 
-		//* Restore original query
-		wp_reset_query();
+						$orig_more = $more;
+						$more = 0;
+
+						the_content( esc_html( $instance['more_text'] ) );
+
+						$more = $orig_more;
+
+					}
+
+					echo '</div>';
+
+				}
+
+				genesis_markup( array(
+					'html5' => '</article>',
+					'xhtml' => '</div>',
+				) );
+
+		endwhile;
+endif;
+
+		// * Reset postdata
+		wp_reset_postdata();
 
 		echo $after_widget;
 
@@ -184,9 +184,8 @@ class AWP_Featured_Communities extends WP_Widget {
 	 * @param array $instance Current settings
 	 */
 	function form( $instance ) {
-        //settings_fields('awp_community_featured_widget'); 
-
-		//* Merge with defaults
+		// settings_fields('awp_community_featured_widget');
+		// * Merge with defaults
 		$instance = wp_parse_args( (array) $instance, $this->defaults );
 
 		?>
@@ -240,8 +239,9 @@ class AWP_Featured_Communities extends WP_Widget {
 				<option value="thumbnail">thumbnail (<?php echo get_option( 'thumbnail_size_w' ); ?>x<?php echo get_option( 'thumbnail_size_h' ); ?>)</option>
 				<?php
 				$sizes = genesis_get_additional_image_sizes();
-				foreach( (array) $sizes as $name => $size )
-					echo '<option value="'.esc_attr( $name ).'" '.selected( $name, $instance['image_size'], FALSE ).'>'.esc_html( $name ).' ( '.$size['width'].'x'.$size['height'].' )</option>';
+				foreach ( (array) $sizes as $name => $size ) {
+					echo '<option value="'.esc_attr( $name ).'" '.selected( $name, $instance['image_size'], false ).'>'.esc_html( $name ).' ( '.$size['width'].'x'.$size['height'].' )</option>';
+				}
 				?>
 			</select>
 		</p>
@@ -263,14 +263,13 @@ class AWP_Featured_Communities extends WP_Widget {
 			</select>
 			<br />
 			<label for="<?php echo $this->get_field_id( 'content_limit' ); ?>"><?php _e( 'Limit content to', 'genesis' ); ?>
-				
+
 				   <input type="text" id="<?php echo $this->get_field_id( 'content_limit' ); ?>" name="<?php echo $this->get_field_name( 'content_limit' ); ?>" value="<?php echo esc_attr( intval( $instance['content_limit'] ) ); ?>" size="3" />
-				
+
 			</label>
 		</p>
 
 		<?php
 
 	}
-
 }

@@ -4,8 +4,8 @@ Contributors: JDELIA
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WRXXR5TR8NXQW
 Tags: genesis, real estate, genesis framework, communities, towns, portfolio, custom post type
 Requires at least: 4.0.0
-Tested up to: 4.5.2
-Stable tag: 0.6.9
+Tested up to: 4.9.6
+Stable tag: 0.7.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,15 +15,13 @@ This plugin adds a Community Custom Post Type to a Genesis Child theme, similar 
 
 **Note: This plugin requires the Genesis Framework.**
 
-Read more about why I wrote this plugin along with examples here: [Genesis Communities CPT Plugin](http://savvyjackiedesigns.com/genesis-communities-cpt-plugin/)
+Read more about why I wrote this plugin along with examples here: [Genesis Communities CPT Plugin](https://jackiedelia.com/genesis-communities-cpt-plugin/)
 
 **CUSTOM POST TYPE NAME AND SLUG**
 
 You can choose the name you want to use for the slug URL under Communities -> Settings. It defaults to ‘communities’.
- 
-You can also change the  singular and plural name of the custom post type. For example if Towns make more sense for you, you can change the singular name to ‘Town’, plural name to ‘Towns’ and the slug to ‘towns’. This makes this plugin versatile as it can be used outside of real estate. Other uses, portfolio, projects, etc.
 
-See example site: [Genesis Sample Theme](http://communities.savvyjackie.com/)
+You can also change the  singular and plural name of the custom post type. For example if Towns make more sense for you, you can change the singular name to ‘Town’, plural name to ‘Towns’ and the slug to ‘towns’. This makes this plugin versatile as it can be used outside of real estate. Other uses, portfolio, projects, etc.
 
 **STYLESHEET**
 
@@ -37,8 +35,6 @@ Adds a widget for sidebar or for using on the home page. Includes a random sort 
 
 Lots of sorting options for this page. Choose them in the Communities -> Settings page. Defaults to sorting by title (ascending A-Z).
 
-See example site: [Genesis Sample Theme Archive Page](http://communities.savvyjackie.com/neighborhoods/)
-
 Will display communities four across on desktop and responsive for smaller viewport widths. (This keeps page load times fast). Includes a random sort option, along with sorting by title, date, post_id, and menu_order. You can change the number of posts per page in the Communities -> Settings page.
 
 == Installation ==
@@ -49,7 +45,7 @@ This section describes how to install the plugin and get it working.
 2. Upload the entire `genesis-communities-cpt` folder to the `/wp-content/plugins/` directory
 3. Activate the plugin through the 'Plugins' menu in WordPress
 4. That's it! You can enter your Archive Page settings under Communities -> Archive Settings.
-5. You can change the name of the slug in Communities -> Settings. 
+5. You can change the name of the slug in Communities -> Settings.
 
 == Frequently Asked Questions ==
 
@@ -72,11 +68,17 @@ Yes. The code is in place.
 3. Sample Detail page for Genesis Communities CPT.
 
 ==Changelog==
-= 0.6.9 = 
+= 0.7.2 =
+Bug fix on Fatal error: Uncaught Error: Call to a member function get() on null under certain conditions.
+= 0.7.1 =
+Bug fix on Fatal error: Call to undefined function get_plugin_data()
+= 0.7.0 =
+Updated banner image for plugin on WordPress repository. Updated urls in README.md and readme.txt files. Bug fix in archive template - add missing closing div and remove duplicate header output. Removed random sort from plugin settings option. Was producing unexpected results and may have also caused an issue using session_start() improperly.
+= 0.6.9 =
 Disabled random sort on archive page with pagination. Was producing unexpected results and may have also caused an issue using session_start() improperly.
 = 0.6.8.1 =
 Oops. Error with version number. Corrected
-= 0.6.8 = 
+= 0.6.8 =
 Bug fix - corrects duplicated featured image on single community post type when using the Winning Agent Pro theme.
 = 0.6.7 =
 Update to avoid conflict with Contact Form 7 hiding the Genesis Communities CPT menu from the Dashboard. Changed menu_position in register_post_type() to 21 from 25.
@@ -89,7 +91,7 @@ Bug fix: Updated plugin stylesheet to correct centering on media queries for arc
 
 = 0.6.4 =
 Bug fix: New sorting options not initialized properly when updating to version 0.6.3
- 
+
 = 0.6.3 =
 Removed erroneous test message.
 
@@ -109,7 +111,7 @@ Stylesheet changes for font sizes and removing borders on single page post displ
 Updated code in functions.php to fix bug that displayed featured image on all single posts instead of just the ‘awp-community’ custom type posts.
 
 = 0.5.0 =
-Plugin renamed to Genesis Communities CPT. New Github location. https://github.com/savvyjackie/genesis-communities-cpt
+Plugin renamed to Genesis Communities CPT. New Github location. https://github.com/jdelia/genesis-communities-cpt
 
 Still need to add support for languages and test.
 
@@ -117,7 +119,7 @@ Still need to add support for languages and test.
 Bug fix if any of the fields are empty to reset to default on settings page. Setting pages now shows current version number.
 
 = 0.4.2 =
-Bug fix - uncommented code to update option on init. 
+Bug fix - uncommented code to update option on init.
 
 = 0.4.1 =
 Fixed bug in awp-settings.php missing slug variable on initial load.
@@ -135,8 +137,8 @@ Initial Release.
 
 = 0.6.8.1 =
 Oops. Error with version number. Corrected.
- 
-= 0.6.8 = 
+
+= 0.6.8 =
 Bug fix - corrects duplicated featured image on single community post type when using the Winning Agent Pro theme.
 = 0.6.7 =
 Update to avoid conflict with Contact Form 7 hiding the Genesis Communities CPT menu from the Dashboard.
